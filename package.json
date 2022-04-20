@@ -1,0 +1,35 @@
+{
+	"name": "minecraft-skin-type",
+	"version": "0.7.0",
+	"description": "Utilities for detect minecraft skin type (slim/default)",
+	"type": "module",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "tsc --declaration --outDir build --sourceMap -p .",
+		"lint": "eslint --ext .ts src",
+		"prepublishOnly": "rimraf build && npm run build"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.25",
+		"@typescript-eslint/eslint-plugin": "^5.9.0",
+		"@typescript-eslint/parser": "^5.9.0",
+		"eslint": "^8.6.0",
+		"typescript": "^4.5.4"
+	},
+	"files": [
+		"build"
+	],
+	"license": "MIT",
+	"author": "Unicore Project <support@unicorecms.ru> (https://github.com/UnicoreProject)",
+	"homepage": "https://github.com/UnicoreProject/minecraft-skin-typey#readme",
+	"bugs": {
+		"url": "https://github.com/UnicoreProject/minecraft-skin-type/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/UnicoreProject/minecraft-skin-type.git"
+	},
+	"dependencies": {
+		"canvas": "^2.9.1"
+	}
+}
