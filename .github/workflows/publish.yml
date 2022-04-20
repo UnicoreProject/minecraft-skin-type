@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@unicore-project'
+          scope: '@unicoreproject'
       - run: npm install
       - run: npm run build
       - run: npm ci

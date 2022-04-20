@@ -1,13 +1,12 @@
 {
-	"name": "@unicore-project/minecraft-skin-type",
+	"name": "@unicoreproject/minecraft-skin-type",
 	"version": "0.1.0",
 	"description": "Utilities for detect minecraft skin type (slim/default)",
 	"type": "module",
 	"main": "build/index.js",
 	"scripts": {
 		"build": "tsc --declaration --outDir build --sourceMap -p .",
-		"lint": "eslint --ext .ts src",
-		"prepublishOnly": "rimraf build && npm run build"
+		"lint": "eslint --ext .ts src"
 	},
 	"devDependencies": {
 		"@types/node": "^17.0.25",
