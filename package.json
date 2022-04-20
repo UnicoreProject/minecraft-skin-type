@@ -1,6 +1,6 @@
 {
 	"name": "minecraft-skin-type",
-	"version": "0.7.0",
+	"version": "0.1.0",
 	"description": "Utilities for detect minecraft skin type (slim/default)",
 	"type": "module",
 	"main": "build/index.js",
