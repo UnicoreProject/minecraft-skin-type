@@ -90,7 +90,7 @@ export class MinecraftSkinType {
 
   private static convertSkinTo1_8(context: CanvasRenderingContext2D, width: number): CanvasRenderingContext2D {
     const scale = this.computeSkinScale(width);
-    const copySkin = (context, sX: number, sY: number, w: number, h: number, dX: number, dY: number, flipHorizontal: boolean): CanvasRenderingContext2D =>
+    const copySkin = (context: CanvasRenderingContext2D, sX: number, sY: number, w: number, h: number, dX: number, dY: number, flipHorizontal: boolean): CanvasRenderingContext2D =>
       this.copyImage(context, sX * scale, sY * scale, w * scale, h * scale, dX * scale, dY * scale, flipHorizontal);
 
     context = copySkin(context, 4, 16, 4, 4, 20, 48, true); // Top Leg
@@ -111,10 +111,10 @@ export class MinecraftSkinType {
   private static fixOpaqueSkin(context: CanvasRenderingContext2D, width: number, format1_8: boolean): CanvasRenderingContext2D {
     if (format1_8) {
       if (this.hasTransparency(context, 0, 0, width, width))
-        return;
+        return context;
     } else {
       if (this.hasTransparency(context, 0, 0, width, width / 2))
-        return;
+        return context;
     }
   
     const scale = this.computeSkinScale(width);
@@ -160,6 +160,8 @@ export class MinecraftSkinType {
       clearArea(56, 52, 4, 12); // Left Arm Layer 2 Left
       clearArea(60, 52, 4, 12); // Left Arm Layer 2 Back
     }
+
+    return context;
   }
 
   private static loadSkinToCanvas(canvas: Canvas, image: Image): Canvas {

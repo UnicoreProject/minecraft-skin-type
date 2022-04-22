@@ -1,6 +1,6 @@
 {
-	"name": "@unicoreproject/minecraft-skin-type",
-	"version": "0.1.0",
+	"name": "@unicorecms/minecraft-skin-type",
+	"version": "0.1.2",
 	"description": "Utilities for detect minecraft skin type (slim/default)",
 	"type": "module",
 	"main": "build/index.js",
