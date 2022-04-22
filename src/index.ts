@@ -196,7 +196,7 @@ export class MinecraftSkinType {
 
   /**
    * Detect skin model type
-   * @param path Skin file patch
+   * @param path Skin file path
    * @returns true if slim-skin or false
    */
   static isSlim(path: string): boolean {
